@@ -1,39 +1,24 @@
-# Algorytm Dijkstry: Najkrótsza Ścieżka w Grafie 🧭
+# 📉 Dijkstra – Najkrótsza Droga (Zadanie 3)
 
-Ten projekt zawiera implementację **Algorytmu Dijkstry** (Dijkstra's Algorithm) w języku Python, służącą do znajdowania najkrótszej ścieżki w ważonym grafie nieskierowanym.
-
----
-
-## 🎯 Cel Projektu
-
-Celem jest rozwiązanie zadania z teorii grafów, polegającego na znalezieniu minimalnego kosztu ścieżki oraz jej rekonstrukcji, pomiędzy dwoma określonymi wierzchołkami w zadanym grafie.
+No dobra, to jest wrzucony kod do algorytmu **Dijkstry**. Zadanie polegało na znalezieniu najkrótszej ścieżki z wierzchołka **1** do **8** w tym popapranym grafie z ćwiczeń.
 
 ---
 
-## 🛠️ Użyte Technologie i Moduły
+## 🚀 Co to robi?
 
-* **Język:** Python 3.x
-* **Moduły:**
-    * `collections` (do `defaultdict` i `deque`)
-    * `queue` (do **`PriorityQueue`** – kolejki priorytetowej)
+W skrócie: program bierze ten nasz graf i wypluwa najkrótszą drogę. Standardowo, używa do tego modułów Pythona, żeby nie pisać wszystkiego od zera.
 
----
+### Kluczowe Elementy
 
-## ⚙️ Struktura Danych i Działanie
-
-1.  **Graf:** Zdefiniowany jako słownik sąsiedztwa (lista sąsiedztwa), gdzie klucze to wierzchołki, a wartości to listy par `(sąsiad, waga_krawędzi)`.
-2.  **Algorytm:** Wykorzystuje **Kolejkę Priorytetową** do efektywnego wybierania wierzchołka o najmniejszym dotychczasowym dystansie, zgodnie z logiką algorytmu Dijkstry.
-3.  **Rekonstrukcja Ścieżki:** Używa słownika `poprzednik` do odtworzenia pełnej, najkrótszej ścieżki od końca do początku.
+* **`graf`**: Definicja grafu w Pythonie. Zrobione na słowniku, bo tak najwygodniej, z wagami krawędzi (te małe numerki przy liniach).
+* **`znajdz_najkrotsza_sciezke`**: Główne mięso, czyli sama funkcja Dijkstry. Używa **`PriorityQueue`** (tej kolejki priorytetowej), żeby nie marnować czasu na sprawdzanie gorszych ścieżek.
+* **`poprzednik`**: Magiczny słownik, który pozwala mi odtworzyć ścieżkę z powrotem. Bez niego by się nie dało pokazać trasy, tylko sam dystans.
 
 ---
 
-## 📊 Wynik dla Zadanego Grafu (1 do 8)
+## 🛠️ Jak to uruchomić?
 
-Program oblicza najkrótszą ścieżkę z wierzchołka **1** do **8** dla grafu podanego w zadaniu.
+W zasadzie wystarczy mieć Pythona 3.x i odpalić skrypt. Żadne dziwne biblioteki nie są potrzebne.
 
-| Parametr | Wartość |
-| :--- | :--- |
-| Wierzchołek Startowy | 1 |
-| Wierzchołek Końcowy | 8 |
-| **Minimalna Długość** | **9.0** |
-| **Najkrótsza Ścieżka** | `[1, 3, 4, 6, 5, 8]` |
+```bash
+python nazwa_pliku_z_kodem.py
