@@ -1,4 +1,4 @@
-# 📉 Dijkstra – Najkrótsza Droga (Zadanie 3)
+# 📉 Dijkstra – Najkrótsza Droga
 
 No dobra, to jest wrzucony kod do algorytmu **Dijkstry**. Zadanie polegało na znalezieniu najkrótszej ścieżki z wierzchołka **1** do **8** w tym popapranym grafie z ćwiczeń.
 
